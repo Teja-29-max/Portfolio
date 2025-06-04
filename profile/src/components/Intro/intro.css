@@ -1,0 +1,132 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 1rem;
+}
+
+.introcontent {
+    flex: 1;
+    min-width: 300px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hello {
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Bold';
+}
+
+.introName {
+    color: yellow;
+}
+
+.intropara {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btnImg {
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.image-wrapper {
+    position: relative;
+    width: clamp(180px, 35vw, 380px);
+    height: clamp(180px, 35vw, 380px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.bg {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.rotating-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+    z-index: 1;
+}
+
+.rotating-ring::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #00cc00;
+    border-right-color: #00cc00;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box;
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .introcontent {
+        font-size: 2rem;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .image-wrapper {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 0;
+        z-index: 0;
+    }
+}

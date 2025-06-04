@@ -1,0 +1,94 @@
+#skills{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.skillsTitle{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.skillsDesc{
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 50rem;
+    padding: 0 2rem;
+}
+.skillsBars {
+    margin: 1.5rem auto;
+    width: 90%;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.skillBar {
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+    transition: all 0.3s ease-in-out;
+    gap: 1rem;
+}
+
+.skillBarImg {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
+.skillBarText > p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.skillBarText > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Tablet and smaller */
+@media screen and (max-width: 768px) {
+    .skillBar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skillBarImg {
+        margin: 0 auto 1rem auto;
+    }
+
+    .skillBarText > p {
+        font-size: 3.5vw;
+    }
+
+    .skillBarText > h2 {
+        font-size: 5vw;
+    }
+}
+
+/* Phones */
+@media screen and (max-width: 480px) {
+    .skillBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .skillBarText > p {
+        font-size: 4vw;
+    }
+
+    .skillBarText > h2 {
+        font-size: 5.5vw;
+    }
+}
